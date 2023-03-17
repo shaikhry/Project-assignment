@@ -26,9 +26,9 @@ function ContactCardFroSideBar() {
    setSelectedIndex(index)
     
   };
-  // const openDrawerForHoursClose = () => {
-  //   setStateEditContact(false);
-  // };
+  const openDrawerForHoursClose = () => {
+    setStateEditContact(false);
+  };
   // const contactData = useSelector((state) => state.ContactReducer.salesTeam);
   // const handleDeleteItem = (item) => {
   //   dispatch(manipulateContact(REMOVE_CONTACT, item.id));
