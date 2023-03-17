@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Typography } from "@mui/material";
-import { Box } from "@mui/system";
-// import CustomDrawer from "../CustomeDrawer/CustomDrawer";
-import ContactInfoForm from "./ContactInfoForm";
+// import {Typography } from "@mui/material";
+// import { Box } from "@mui/system";
+import CustomDrawer from "../CustomeDrawer/CustomDrawer";
+// import ContactInfoForm from "./ContactInfoForm";
 // import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 // import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 // import EditIcon from "@mui/icons-material/Edit";
@@ -36,90 +36,90 @@ function ContactCardFroSideBar() {
   };
 
   return (
-    <>
-      {contactData?.map((item, index) => {
-        console.log(item, "item");
-        return (
-          <Box
-            key={index}
-            sx={{
-              border: "1px solid #BCBCBC",
-              p: 2,
-              borderRadius: "10px",
-              mt: 2,
-              // width: width,
-            }}
-          >
-            <Box
-              sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}
-            >
-              <Box
-                display={"flex"}
-                justifyContent={"left"}
-                alignItems={"center"}
-              >
-                {/* <PermContactCalendarIcon
-                  sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }}
-                /> */}
-                <Typography textAlign={"left"} variant="h6" fontWeight={700}>
-                  {item.profession}
-                </Typography>
-              </Box>
-              <Box sx={{ ml: 2 }}>
-                {/* {item ? (
-                  <DeleteForeverRoundedIcon
-                    sx={{ color: "#C8343A", mr: 1 }}
-                    onClick={() => handleDeleteItem(item, index)}
-                  />
-                ) : null} */}
+//     <>
+//       {contactData?.map((item, index) => {
+//         console.log(item, "item");
+//         return (
+//           <Box
+//             key={index}
+//             sx={{
+//               border: "1px solid #BCBCBC",
+//               p: 2,
+//               borderRadius: "10px",
+//               mt: 2,
+//               // width: width,
+//             }}
+//           >
+//             <Box
+//               sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}
+//             >
+//               <Box
+//                 display={"flex"}
+//                 justifyContent={"left"}
+//                 alignItems={"center"}
+//               >
+//                 <PermContactCalendarIcon
+//                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }}
+//                 />
+//                 <Typography textAlign={"left"} variant="h6" fontWeight={700}>
+//                   {item.profession}
+//                 </Typography>
+//               </Box>
+//               <Box sx={{ ml: 2 }}>
+//                 {item ? (
+//                   <DeleteForeverRoundedIcon
+//                     sx={{ color: "#C8343A", mr: 1 }}
+//                     onClick={() => handleDeleteItem(item, index)}
+//                   />
+//                 ) : null}
 
-                {/* <EditIcon 
-                  sx={{ color: "#C8343A" }}
-                  onClick={() => openDrawerForHours(item, index)}
-                /> */}
-              </Box>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent={"left"}
-              alignItems={"center"}
-              sx={{ mb: 0.5 }}
-            >
-              {/* {item?.email ? (
-                <MailRoundedIcon
-                  sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
-                />
-              ) : null} */}
-              {item?.email.map((data, index) => {
-                return (
-                  <Box>
-                    <Typography textAlign={"left"} variant="body1" key={index}>
-                      {`${data} | `}
-                    </Typography>
-                  </Box>
-                );
-              })}
-             </Box>
-             <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
-              {/* {item?.phone ? (
-                <LocalPhoneRoundedIcon
-                  sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
-                />
-              ) : null} */}
-              {item?.phone.map((data, index) => {
-                return (
-                  <Box>
-                    <Typography textAlign={"left"} variant="body1" key={index}>
-                      {`${data} | `}
-                    </Typography>
-                  </Box>
-                );
-              })}
-             </Box>
-            </Box>
-        );
-      })}
-      {/* <CustomDrawer
+//                 <EditIcon 
+//                   sx={{ color: "#C8343A" }}
+//                   onClick={() => openDrawerForHours(item, index)}
+//                 />
+//               </Box>
+//             </Box>
+//             <Box
+//               display={"flex"}
+//               justifyContent={"left"}
+//               alignItems={"center"}
+//               sx={{ mb: 0.5 }}
+//             >
+//               {item?.email ? (
+//                 <MailRoundedIcon
+//                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
+//                 />
+//               ) : null}
+//               {item?.email.map((data, index) => {
+//                 return (
+//                   <Box>
+//                     <Typography textAlign={"left"} variant="body1" key={index}>
+//                       {`${data} | `}
+//                     </Typography>
+//                   </Box>
+//                 );
+//               })}
+//             </Box>
+//             <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
+//               {item?.phone ? (
+//                 <LocalPhoneRoundedIcon
+//                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
+//                 />
+//               ) : null}
+//               {item?.phone.map((data, index) => {
+//                 return (
+//                   <Box>
+//                     <Typography textAlign={"left"} variant="body1" key={index}>
+//                       {`${data} | `}
+//                     </Typography>
+//                   </Box>
+//                 );
+//               })}
+//             </Box>
+//           </Box>
+//         );
+//       })}
+      <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
         childern={
@@ -128,8 +128,8 @@ function ContactCardFroSideBar() {
         title={"Contact"}
         subtitle={"Please provide the company's email & contacts"}
         key={2}
-      /> */}
-     </>
+      />
+//     </>
  
   );
 }
