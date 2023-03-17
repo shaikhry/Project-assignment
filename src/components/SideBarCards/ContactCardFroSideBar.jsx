@@ -1,11 +1,11 @@
 import React,{useState} from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
-// import ContactInfoForm from "./ContactInfoForm";         // issue is here
-// import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
-// import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
+import ContactInfoForm from "./ContactInfoForm";         // issue is here
+import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
+import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import EditIcon from "@mui/icons-material/Edit";
 import MailRoundedIcon from "@mui/icons-material/MailRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
