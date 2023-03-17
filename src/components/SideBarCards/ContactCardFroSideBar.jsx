@@ -37,8 +37,7 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-      {/* {contactData?.map((item, index) => {
-        console.log(item, "item");
+     {contactData?.map((item, index) => {
         return (
           <Box
             key={index}
@@ -47,12 +46,12 @@ function ContactCardFroSideBar() {
               p: 2,
               borderRadius: "10px",
               mt: 2,
-              // width: width,
+              
             }}
-          >
-          <Box
+           >
+           <Box
               sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}
-            >
+             >
               <Box
                 display={"flex"}
                 justifyContent={"left"}
@@ -78,13 +77,13 @@ function ContactCardFroSideBar() {
                   onClick={() => openDrawerForHours(item, index)}
                 />
               </Box>
-            </Box>
-            <Box
+             </Box>
+             {/* <Box
               display={"flex"}
               justifyContent={"left"}
               alignItems={"center"}
               sx={{ mb: 0.5 }}
-            >
+             >
               {item?.email ? (
                 <MailRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
@@ -99,14 +98,14 @@ function ContactCardFroSideBar() {
                   </Box>
                 );
               })}
-            </Box>
-            <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
-              {item?.phone ? (
+             </Box> */}
+             {/* <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
+               {item?.phone ? (
                 <LocalPhoneRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
-              ) : null}
-              {item?.phone.map((data, index) => {
+               ) : null}
+               {item?.phone.map((data, index) => {
                 return (
                   <Box>
                     <Typography textAlign={"left"} variant="body1" key={index}>
@@ -114,11 +113,11 @@ function ContactCardFroSideBar() {
                     </Typography>
                   </Box>
                 );
-              })}
-            </Box>
-          </Box>
+               })}
+                </Box> */}
+      </Box>
         );
-      })} */}
+      })} 
       <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
