@@ -2,17 +2,17 @@ import React,{useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import CustomDrawer from "../CustomeDrawer/CustomDrawer";
+// import CustomDrawer from "../CustomeDrawer/CustomDrawer";
 import ContactInfoForm from "./ContactInfoForm";
 // import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 // import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 // import EditIcon from "@mui/icons-material/Edit";
 // import MailRoundedIcon from "@mui/icons-material/MailRounded";
 // import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-// import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-// import {
-//   REMOVE_CONTACT,
-// } from "../../redux/ContactInfo/Contact-Constants";
+import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
+import {
+  REMOVE_CONTACT,
+} from "../../redux/ContactInfo/Contact-Constants";
 function ContactCardFroSideBar() {
   const [stateEditContact, setStateEditContact] = React.useState(false);
   const [selectedItem,setSelectedItem]=useState()
@@ -31,7 +31,7 @@ function ContactCardFroSideBar() {
   };
   const contactData = useSelector((state) => state.ContactReducer.salesTeam);
   const handleDeleteItem = (item) => {
-    // dispatch(manipulateContact(REMOVE_CONTACT, item.id));
+    dispatch(manipulateContact(REMOVE_CONTACT, item.id));
     
   };
 
@@ -119,7 +119,7 @@ function ContactCardFroSideBar() {
             </Box>
         );
       })}
-      <CustomDrawer
+      {/* <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
         childern={
@@ -128,8 +128,8 @@ function ContactCardFroSideBar() {
         title={"Contact"}
         subtitle={"Please provide the company's email & contacts"}
         key={2}
-      />
-//     </>
+      /> */}
+     </>
  
   );
 }
