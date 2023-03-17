@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
-// import ContactInfoForm from "./ContactInfoForm";        
+import ContactInfoForm from "./ContactInfoForm";        
 import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import EditIcon from "@mui/icons-material/Edit";
@@ -121,10 +121,10 @@ function ContactCardFroSideBar() {
       <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
-        // childern={
-        //   <ContactInfoForm selectedItem={selectedItem} selectedindex={selectedindex} />
-        // }
-        // title={"Contact"}
+        childern={
+          <ContactInfoForm selectedItem={selectedItem} selectedindex={selectedindex} />
+        }
+        title={"Contact"}
         subtitle={"Please provide the company's email & contacts"}
         key={2}
       />

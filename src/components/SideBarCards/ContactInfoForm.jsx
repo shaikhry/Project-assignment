@@ -1,15 +1,15 @@
 import { Box, Button } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/system";
+// import { createTheme, ThemeProvider } from "@mui/system";
 import React, { useState } from "react";
 import { IconTextField } from "../TextField/TextFieldWithIcon";
-import InpuFieldsForForms from "./InputFieldsForForms";
+// import InpuFieldsForForms from "./InputFieldsForForms";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import { useDispatch, useSelector } from "react-redux";
 import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-import { ADD_CONTACT, EDIT_OBJECT } from "../../redux/ContactInfo/Contact-Constants";
+import { EDIT_OBJECT } from "../../redux/ContactInfo/Contact-Constants";
 // 
 
-function ContactInfoForm({itemForEdit,editIndex,isEdit,selectedItem}) {
+function ContactInfoForm({selectedItem}) {
   const [email, setEmail] = useState([...selectedItem.email]);
   const [phone, setPhone] = useState([...selectedItem.phone]);
   // const [updateTodo,setUpdateTodo]=useState() 
@@ -69,7 +69,7 @@ function ContactInfoForm({itemForEdit,editIndex,isEdit,selectedItem}) {
       >
         <Box>
           <Box>
-            {email?.map((item, index) => {
+            {email.map((item, index) => {
               console.log(item,"item")
               return (
                 <IconTextField
@@ -97,7 +97,7 @@ function ContactInfoForm({itemForEdit,editIndex,isEdit,selectedItem}) {
             </Button>
           </Box>
           <Box>
-            {phone?.map((item, index) => {
+            {phone.map((item, index) => {
               return (
                 <IconTextField
                   color="neutral"
