@@ -1,20 +1,16 @@
-import { Divider, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ContactCard from "../Card/ContactCard";
+import {Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
 import ContactInfoForm from "./ContactInfoForm";
-import ContactInpuFields from "./InputFieldsForForms";
-import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
-import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
-import EditIcon from "@mui/icons-material/Edit";
-import MailRoundedIcon from "@mui/icons-material/MailRounded";
-import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import ShowChartIcon from "@mui/icons-material/ShowChart";
+// import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
+// import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
+// import EditIcon from "@mui/icons-material/Edit";
+// import MailRoundedIcon from "@mui/icons-material/MailRounded";
+// import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
 import {
-  EDIT_OBJECT,
   REMOVE_CONTACT,
 } from "../../redux/ContactInfo/Contact-Constants";
 function ContactCardFroSideBar() {
@@ -62,25 +58,25 @@ function ContactCardFroSideBar() {
                 justifyContent={"left"}
                 alignItems={"center"}
               >
-                <PermContactCalendarIcon
+                {/* <PermContactCalendarIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }}
-                />
+                /> */}
                 <Typography textAlign={"left"} variant="h6" fontWeight={700}>
                   {item.profession}
                 </Typography>
               </Box>
               <Box sx={{ ml: 2 }}>
-                {item ? (
+                {/* {item ? (
                   <DeleteForeverRoundedIcon
                     sx={{ color: "#C8343A", mr: 1 }}
                     onClick={() => handleDeleteItem(item, index)}
                   />
-                ) : null}
+                ) : null} */}
 
-                <EditIcon 
+                {/* <EditIcon 
                   sx={{ color: "#C8343A" }}
                   onClick={() => openDrawerForHours(item, index)}
-                />
+                /> */}
               </Box>
             </Box>
             <Box
@@ -89,11 +85,11 @@ function ContactCardFroSideBar() {
               alignItems={"center"}
               sx={{ mb: 0.5 }}
             >
-              {item?.email ? (
+              {/* {item?.email ? (
                 <MailRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
-              ) : null}
+              ) : null} */}
               {item?.email.map((data, index) => {
                 return (
                   <Box>
@@ -103,13 +99,13 @@ function ContactCardFroSideBar() {
                   </Box>
                 );
               })}
-            </Box>
-            <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
-              {item?.phone ? (
+             </Box>
+             <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
+              {/* {item?.phone ? (
                 <LocalPhoneRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
-              ) : null}
+              ) : null} */}
               {item?.phone.map((data, index) => {
                 return (
                   <Box>
@@ -119,8 +115,8 @@ function ContactCardFroSideBar() {
                   </Box>
                 );
               })}
+             </Box>
             </Box>
-          </Box>
         );
       })}
       <CustomDrawer
@@ -133,7 +129,8 @@ function ContactCardFroSideBar() {
         subtitle={"Please provide the company's email & contacts"}
         key={2}
       />
-    </>
+//     </>
+ 
   );
 }
 

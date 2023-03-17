@@ -1,11 +1,11 @@
 import { ThemeProvider } from "@emotion/react";
 import { Box } from "@mui/system";
-import "./App.css";
 import CustomDrawer from "./components/CustomeDrawer/CustomDrawer";
 import Header from "./components/navigationBars/Header";
 import SideBarNav from "./components/navigationBars/SideBar";
 import Home from "./pages/Home";
 import theme from "./theme";
+import React from "react";
 const drawerWidth = 288;
 
 function App() {
