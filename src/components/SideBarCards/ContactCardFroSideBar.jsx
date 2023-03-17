@@ -37,7 +37,7 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-     {contactData?.map((item, index) => {
+     {/* {contactData?.map((item, index) => {
         return (
           <Box
             key={index}
@@ -78,7 +78,7 @@ function ContactCardFroSideBar() {
                 />
               </Box>
              </Box>
-             {/* <Box
+             <Box
               display={"flex"}
               justifyContent={"left"}
               alignItems={"center"}
@@ -98,8 +98,8 @@ function ContactCardFroSideBar() {
                   </Box>
                 );
               })}
-             </Box> */}
-             {/* <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
+             </Box>
+             <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
                {item?.phone ? (
                 <LocalPhoneRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
@@ -114,10 +114,10 @@ function ContactCardFroSideBar() {
                   </Box>
                 );
                })}
-                </Box> */}
+                </Box>
       </Box>
         );
-      })} 
+      })}  */}
       <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
