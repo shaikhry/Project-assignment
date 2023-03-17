@@ -37,8 +37,8 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-     {/* {[]?.map((item, index) => <p>hghjbm</p>)}  */}
-     <p>jhghjgh</p>
+     {[].map((item, index) => <p>hghjbm</p>)} 
+     {/* <p>jhghjgh</p> */}
       <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
