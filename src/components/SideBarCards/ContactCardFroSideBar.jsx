@@ -10,9 +10,9 @@ import ContactInfoForm from "./ContactInfoForm";
 // import MailRoundedIcon from "@mui/icons-material/MailRounded";
 // import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 // import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-import {
-  REMOVE_CONTACT,
-} from "../../redux/ContactInfo/Contact-Constants";
+// import {
+//   REMOVE_CONTACT,
+// } from "../../redux/ContactInfo/Contact-Constants";
 function ContactCardFroSideBar() {
   const [stateEditContact, setStateEditContact] = React.useState(false);
   const [selectedItem,setSelectedItem]=useState()
