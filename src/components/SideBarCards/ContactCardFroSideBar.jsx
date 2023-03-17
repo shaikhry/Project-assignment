@@ -37,11 +37,7 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-     {contactData?.map((item, index) => {
-        return (
-         <h1>hello</h1>
-          );
-      })} 
+     {contactData?.map((item, index) => <p>hghjbm</p>)} 
       <CustomDrawer
         state={stateEditContact}
         toggleDrawer={openDrawerForHoursClose}
