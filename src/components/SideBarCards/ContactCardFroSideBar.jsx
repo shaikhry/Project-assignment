@@ -9,10 +9,10 @@ import CustomDrawer from "../CustomeDrawer/CustomDrawer";
 // import EditIcon from "@mui/icons-material/Edit";
 // import MailRoundedIcon from "@mui/icons-material/MailRounded";
 // import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-// import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-// import {
-//   REMOVE_CONTACT,
-// } from "../../redux/ContactInfo/Contact-Constants";
+import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
+import {
+  REMOVE_CONTACT,
+} from "../../redux/ContactInfo/Contact-Constants";
 function ContactCardFroSideBar() {
   const [stateEditContact, setStateEditContact] = React.useState(false);
   const [selectedItem,setSelectedItem]=useState()
