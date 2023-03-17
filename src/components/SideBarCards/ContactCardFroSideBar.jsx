@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 // import {Typography } from "@mui/material";
 // import { Box } from "@mui/system";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
@@ -9,10 +9,10 @@ import ContactInfoForm from "./ContactInfoForm";
 // import EditIcon from "@mui/icons-material/Edit";
 // import MailRoundedIcon from "@mui/icons-material/MailRounded";
 // import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-import {
-  REMOVE_CONTACT,
-} from "../../redux/ContactInfo/Contact-Constants";
+// import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
+// import {
+//   REMOVE_CONTACT,
+// } from "../../redux/ContactInfo/Contact-Constants";
 function ContactCardFroSideBar() {
   // const [stateEditContact, setStateEditContact] = React.useState(false);
   // const [selectedItem,setSelectedItem]=useState()
