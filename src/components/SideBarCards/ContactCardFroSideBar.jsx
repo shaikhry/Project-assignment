@@ -37,7 +37,7 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-     {[].map((item, index) => <p>hghjbm</p>)} 
+     {contactData.map((item, index) => <p>hghjbm</p>)} 
      {/* <p>jhghjgh</p> */}
       <CustomDrawer
         state={stateEditContact}
