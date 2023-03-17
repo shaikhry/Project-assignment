@@ -9,7 +9,7 @@ import ContactInfoForm from "./ContactInfoForm";
 // import EditIcon from "@mui/icons-material/Edit";
 // import MailRoundedIcon from "@mui/icons-material/MailRounded";
 // import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
+// import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
 import {
   REMOVE_CONTACT,
 } from "../../redux/ContactInfo/Contact-Constants";
@@ -31,7 +31,7 @@ function ContactCardFroSideBar() {
   };
   const contactData = useSelector((state) => state.ContactReducer.salesTeam);
   const handleDeleteItem = (item) => {
-    dispatch(manipulateContact(REMOVE_CONTACT, item.id));
+    // dispatch(manipulateContact(REMOVE_CONTACT, item.id));
     
   };
 
