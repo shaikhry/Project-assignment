@@ -37,7 +37,7 @@ function ContactCardFroSideBar() {
 
   return (
     <>
-     {[]?.map((item, index) => {
+     {contactData?.map((item, index) => {
         return (
           <Box
             key={index}
@@ -57,15 +57,15 @@ function ContactCardFroSideBar() {
                 justifyContent={"left"}
                 alignItems={"center"}
               >
-                <PermContactCalendarIcon
+                {/* <PermContactCalendarIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }}
-                />
+                /> */}
                 <Typography textAlign={"left"} variant="h6" fontWeight={700}>
                   {item.profession}
                 </Typography>
               </Box>
               <Box sx={{ ml: 2 }}>
-                {item ? (
+                {/* {item ? (
                   <DeleteForeverRoundedIcon
                     sx={{ color: "#C8343A", mr: 1 }}
                     onClick={() => handleDeleteItem(item, index)}
@@ -75,7 +75,7 @@ function ContactCardFroSideBar() {
                 <EditIcon 
                   sx={{ color: "#C8343A" }}
                   onClick={() => openDrawerForHours(item, index)}
-                />
+                /> */}
               </Box>
              </Box>
              <Box
@@ -84,12 +84,12 @@ function ContactCardFroSideBar() {
               alignItems={"center"}
               sx={{ mb: 0.5 }}
              >
-              {item?.email ? (
+              {/* {item?.email ? (
                 <MailRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
-              ) : null}
-              {item?.email.map((data, index) => {
+              ) : null} */}
+              {/* {item?.email.map((data, index) => {
                 return (
                   <Box>
                     <Typography textAlign={"left"} variant="body1" key={index}>
@@ -97,15 +97,15 @@ function ContactCardFroSideBar() {
                     </Typography>
                   </Box>
                 );
-              })}
+              })} */}
              </Box>
              <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
-               {item?.phone ? (
+               {/* {item?.phone ? (
                 <LocalPhoneRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
-               ) : null}
-               {item?.phone.map((data, index) => {
+               ) : null} */}
+               {/* {item?.phone.map((data, index) => {
                 return (
                   <Box>
                     <Typography textAlign={"left"} variant="body1" key={index}>
@@ -113,7 +113,7 @@ function ContactCardFroSideBar() {
                     </Typography>
                   </Box>
                 );
-               })}
+               })} */}
                 </Box>
       </Box>
         );
