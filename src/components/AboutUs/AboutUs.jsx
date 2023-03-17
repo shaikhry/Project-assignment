@@ -61,7 +61,7 @@ const handleChange=(e)=>{
         <List sx={{ display: "inline-block" }}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar sx={{ borderRadius: 0 }} alt="Remy Sharp" src={atLogo} />
+              <Avatar sx={{ borderRadius: 0 ,height:'50px',with:'70px'}} alt="Remy Sharp" src={atLogo} />
             </ListItemAvatar>
             <ListItemText
               primary={

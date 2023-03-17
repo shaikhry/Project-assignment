@@ -30,7 +30,7 @@ const ContactCard = ({
           border: "1px solid #BCBCBC",
           p: 2,
           borderRadius: "10px",
-          width: width,
+          width: '28%',
         }}
       >
 

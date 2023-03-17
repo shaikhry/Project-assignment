@@ -5,14 +5,19 @@ import {
   Button,
   CardMedia,
   IconButton,
+  InputAdornment,
   List,
   ListItem,
   ListItemAvatar,
   ListItemButton,
   ListItemText,
+  TextField,
   Toolbar,
   Typography,
 } from "@mui/material";
+
+
+import atLogo from "../../assets/A.T-inks-logo.png";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import React from "react";
@@ -24,6 +29,8 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import profile from "../../assets/profilePhoto.jpg";
 import SideBarNav from "./SideBar";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
+import { IconTextField } from "../TextField/TextFieldWithIcon";
+import { textAlign } from "@mui/system";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -73,7 +80,7 @@ const Header = () => {
             backgroundColor: "white",
             color: "black",
             boxShadow: "0px 1px 10px rgba(238, 239, 244, 1);",
-            padding: "20px 100px 20px 100px",
+            padding: "20px 100px 20px 10  0px",
           }}
         >
           <Toolbar>
@@ -82,9 +89,38 @@ const Header = () => {
                 <KeyboardArrowLeftOutlinedIcon sx={{ fontSize: "32px",color:"#712AA9" }} />
               </IconButton>
               <Typography sx={{ fontSize: "31px", fontWeight: "600" ,color:"#000"}}>
-                Create User
+              <CardMedia
+          component="img"
+          sx={{
+            height: 40,
+            objectFit: "contain",
+          }}
+          alt=""
+          src={atLogo}
+        />
+        
               </Typography>
+              AT Link
+              <br />
+              
+              .RED
+              
             </Box>
+
+<Box style={{position:'relative',bottom:'5px',marginLeft:'120px'}}>
+  
+  <input type="text"  placeholder='Search...' style={{width:'400px',borderRadius:'5px',
+  border:'none',
+    height:'30px',backgroundColor:'#F8F9F9',fontSize:'18px'}}/>
+
+</Box>
+
+<Box style={{marginLeft:'220px',border:'2px solid',width:'150px',height:'26px',color:'white',backgroundColor:'black'
+,textAlign:'center',borderRadius:'5px',paddingTop:'5px',fontSize:'15px'
+}}>
+  Checkout(200)
+</Box>
+
             <Box
               component="div"
               sx={{ flexGrow: 1, display: "flex", justifyContent: "right" }}
@@ -92,16 +128,18 @@ const Header = () => {
 
             <Box display="flex" alignItems={"center"}>
               <Avatar
-                sx={{ mr: 2 ,color:"#712AA9",backgroundColor:"#F7EDFF",width:"51px",height:"51px"}}
-                sizes="50px"
+                sx={{ mr: 1 ,color:"#712AA9",backgroundColor:"#F7EDFF",width:"41px",height:"41px"}}
+                sizes="30px"
                 alt="Remy Sharp"
                 src="/static/images/avatar/1.jpg"
               />
               <Typography
-                variant="h5"
-                sx={{ fontSize: "28px", fontWeight: "600" ,color:"#712AA9"}}
+                variant="h6"
+                sx={{ }}
               >
-                User name
+               User Admin  <select style={{border:'none'}}>
+
+               </select>
               </Typography>
             </Box>
           </Toolbar>

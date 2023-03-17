@@ -19,7 +19,7 @@ function StatementCard({ title, toggleDrawer }) {
         border: "1px solid #BCBCBC",
         p: 2,
         borderRadius: "10px",
-        width: "30%",
+        width: "28%",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>

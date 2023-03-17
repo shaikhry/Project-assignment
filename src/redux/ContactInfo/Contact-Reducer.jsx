@@ -76,7 +76,7 @@ const ContactReducer = (state = initialState, action) => {
         AddressForm: action.payload
       }
       case 'SHOW_CONTACT': return {
-        ...state,user:[...action.payload]
+        ...state,user:[action.payload]
       }
 
     case EDIT_OBJECT:

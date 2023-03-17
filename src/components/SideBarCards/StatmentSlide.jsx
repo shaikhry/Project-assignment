@@ -11,6 +11,7 @@ import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 import { manipulateStatments } from "../../redux/ContactInfo/StatmentsAction";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
 import StatmentSlidInput from "./StatmentSlidInput";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 const StatementSlid = ({ title }) => {
     const [stateEditStatment,setStateEditStatment]=useState(false)
     const [selected,setSelected]=useState()
@@ -47,16 +48,16 @@ console.log('sad',newIndex);
     return (
         <Box
 
-            sx={{
-               
-                p: 2,
-                borderRadius: "10px",
-                mt: 2,
+        sx={{
+            // border: "1px solid #BCBCBC",
+           width:'100%',
+            borderRadius: "10px",
+            mt: 2,
                 
             }}
         >
             
-            <Box  display={'flex'} justifyContent={'right'}>
+            {/* <Box  sx={{ display: "flex", justifyContent: "right", mb: 3 }}>
                 <AddCircleOutlineIcon sx={{
                     color: "#C8343A"
                    
@@ -64,45 +65,72 @@ console.log('sad',newIndex);
                 onClick={()=>handleAdd()}
                  />
                 <Typography sx={{ color: "#C8343A" }} variant="span">Add</Typography>
-            </Box>
-            <Box
-                sx={{ display: "flex", 
-                justifyContent: "space-between",
-                 mb: 4, flexDirection: 'row' }}
-            >
+            </Box> */}
+           
  
                 <Box
-
+                    style={{display:'flex',flexDirection:'column'}}
                 >
                     {
                         data.map((item,index) => {
                             return <Box sx={{
-                                ml: 2,
+                                display:'flex',
+                                alignItem:'center',
+                                // mr: 2,
                                 border: "1px solid #BCBCBC",
-                                p: 2,
+                                pl:2,
+                                pr:2,
                                 borderRadius: "10px",
-                                mt: 2
-                            }}
+                                mt: 4,  
+                                height:'150px',
+                                // width:'300px'
+                                }}  >
+                                    
+                    
+
+                                    
+                                    
+                                   <Box style={{marginTop:'25px',with:'75%',display:'flex'}}>
+                                      {/* <Typography variant='p'> */}
+                                      {/* </Typography> */}
+                                      <FormatQuoteIcon sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }} />
+                                        <Typography>
+                                        {item.name}
+                                        </Typography>
+
+                                   </Box>
+
+                                  
 
 
-                                display={"flex"}
-                                justifyContent={"space-between"}
-                            > <Typography variant='p'>
-                                    {item.name}
-                                    <DeleteForeverRoundedIcon
+                              
+
+
+                                <Box style={{display:'flex',marginTop:'25px'}}>
+                              <DeleteForeverRoundedIcon
                                     onClick={()=>handleDelete(item)}
                                     sx={{ color: "#C8343A", mr: 1 }} />
                                     <EditIcon
                                         sx={{ color: "#C8343A" ,mr:1}}
-                                        onClick={()=>handleEdit(item,index)}
+                                        onClick={()=>handleEdit(item,index)} 
 
                                     />
 
+                                </Box>
 
-                                </Typography>
+     
+                            </Box>
+
+                        })
+                    }
 
 
-     <CustomDrawer
+
+                
+
+
+            </Box>
+            <CustomDrawer
       state={stateEditStatment}
       toggleDrawer={openDrawerForHoursClose}
             childern={
@@ -118,17 +146,7 @@ console.log('sad',newIndex);
            
             key={3}
       />    
-                            </Box>
 
-                        })
-                    }
-
-
-
-                </Box>
-
-
-            </Box>
 <br /> 
         </Box>
 

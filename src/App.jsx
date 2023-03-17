@@ -6,7 +6,7 @@ import SideBarNav from "./components/navigationBars/SideBar";
 import Home from "./pages/Home";
 import theme from "./theme";
 import React from "react";
-const drawerWidth = 288;
+const drawerWidth = 280;
 
 function App() {
   return (
@@ -15,14 +15,20 @@ function App() {
         {/* <CustomDrawer/> */}
 
         <Header />
-        <SideBarNav/>
+      
+        <SideBarNav />
+      
         <Box
           sx={{
-            width: { sm: `calc(100% - ${drawerWidth}px 24px)` },
-            ml: { sm: `${drawerWidth}px` },
+             width: { sm: `calc(100% - ${drawerWidth}px 24px)` },
+            ml: { sm: `${drawerWidth}px`},
             mt: 3,
             mr: 3,
+            
+          
+            
           }}
+         
         >
 
           <Home />

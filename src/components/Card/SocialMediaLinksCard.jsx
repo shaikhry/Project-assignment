@@ -17,13 +17,13 @@ function SocialMediaLinksCard({ title ,toggleDrawer}) {
         border: "1px solid #BCBCBC",
         p: 2,
         borderRadius: "10px",
-        width: "30%",
+        width: "28%",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
         <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
           <InsertLinkIcon sx={{ mr: 2, color: "#BCBCBC", fontSize: "28px" }} />
-          <Typography textAlign={"left"} variant="h6" fontWeight={700}>
+          <Typography textAlign={"left"} variant="p" fontSize={20} fontWeight={700}>
             {'Social Media & Links'}
           </Typography>
         </Box>

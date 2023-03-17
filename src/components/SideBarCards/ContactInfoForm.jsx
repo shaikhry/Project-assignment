@@ -6,10 +6,10 @@ import { IconTextField } from "../TextField/TextFieldWithIcon";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import { useDispatch, useSelector } from "react-redux";
 import { manipulateContact } from "../../redux/ContactInfo/Contact-Action";
-import { EDIT_OBJECT } from "../../redux/ContactInfo/Contact-Constants";
+import { ADD_CONTACT, EDIT_OBJECT } from "../../redux/ContactInfo/Contact-Constants";
 // 
 
-function ContactInfoForm({selectedItem}) {
+function ContactInfoForm({itemForEdit,editIndex,isEdit,selectedItem}) {
   const [email, setEmail] = useState([...selectedItem.email]);
   const [phone, setPhone] = useState([...selectedItem.phone]);
   // const [updateTodo,setUpdateTodo]=useState() 

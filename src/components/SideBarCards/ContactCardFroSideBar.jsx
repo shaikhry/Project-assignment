@@ -128,7 +128,7 @@ function ContactCardFroSideBar() {
         subtitle={"Please provide the company's email & contacts"}
         key={2}
       />
-//     </>
+     </>
  
   );
 }

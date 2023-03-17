@@ -24,6 +24,7 @@ import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import PaymentsRoundedIcon from "@mui/icons-material/PaymentsRounded";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
+import atLogo from "../../assets/A.T-inks-logo.png";
 
 const drawerWidth = 240;
 const SideBarNav = () => {
@@ -34,7 +35,7 @@ const SideBarNav = () => {
   };
 
   const drawer = (
-    <div>
+    <div >
       {/* <Toolbar /> */}
       <Box sx={{ p: 2, py: 3, borderRadius: "10px" }}>
         <CardMedia
@@ -44,7 +45,7 @@ const SideBarNav = () => {
             objectFit: "contain",
           }}
           alt=""
-          src={logo}
+          src={atLogo}
         />
       </Box>
 
@@ -152,6 +153,7 @@ const SideBarNav = () => {
           mx: 2,
           p: 2,
         }}
+        style={{textAlign:'center'}}
       >
         <Box>
           <ContactSupportIcon sx={{ fontSize: "32px", color: "#BCBCBC" }} />
