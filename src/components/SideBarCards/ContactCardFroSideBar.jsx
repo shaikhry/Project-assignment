@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import CustomDrawer from "../CustomeDrawer/CustomDrawer";
@@ -18,7 +18,7 @@ function ContactCardFroSideBar() {
   const [selectedItem,setSelectedItem]=useState()
   const [selectedindex,setSelectedIndex]=useState()
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const openDrawerForHours = (item, index) => {
     setStateEditContact(true);
