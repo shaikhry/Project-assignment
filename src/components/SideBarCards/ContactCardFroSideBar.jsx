@@ -84,7 +84,7 @@ function ContactCardFroSideBar() {
               alignItems={"center"}
               sx={{ mb: 0.5 }}
              >
-              {item?.email ? (
+              {item.email ? (
                 <MailRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
@@ -100,7 +100,7 @@ function ContactCardFroSideBar() {
               })}
              </Box>
              <Box display={"flex"} justifyContent={"left"} alignItems={"center"}>
-               {item?.phone ? (
+               {item.phone ? (
                 <LocalPhoneRoundedIcon
                   sx={{ mr: 2, color: "#BCBCBC", fontSize: "20px" }}
                 />
