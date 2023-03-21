@@ -90,7 +90,7 @@ const handleChange=(e)=>{
             variant="body1"
             sx={{ textDecoration: "underline", display: "inline-block",color:"#0072E5",cursor:"pointer" }}
           >
-            Verift Company
+            Verify Company
           </Typography>
         </Box>
       </Box>
